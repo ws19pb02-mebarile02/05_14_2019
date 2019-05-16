@@ -47,12 +47,12 @@ while True:
     
     for i in xo[:2]:
         if 3*i in board[:3] or 3*i in board[3:6]\
-        or 3*i in board[6:9] or 3*i in board[:8:3]\
-        or 3*i in board[1:9:3] or 3*i in board[2::3]\
+        or 3*i in board[6:] or 3*i in board[:7:3]\
+        or 3*i in board[1:8:3] or 3*i in board[2::3]\
         or 3*i in board[::4] or 3*i in board[2:7:2]:
             count += 1
             temp.append(i)
-    
+            
     # prints results
     
     if count == 2:
