@@ -30,17 +30,24 @@ while True:
     checks to see if board is string of length 9 containing only x,o and whitespace
     """
     
+    count1 = 0
+    
     if isinstance(board,str) and len(board) == 9:  
         board = board.lower()
         for j in board:
             if j not in xo:
                 print('Illegal input. Only X, O and whitespace!')
+                count1 += 1
                 break
 
     else:
         print('Enter a string of length 3 for each row! ')
+        count1 += 1
+       
+    if count1 > 0:
+        continue
             
-    count = 0
+    count2 = 0
     temp = []
 
     # determines if there is a winning configuration
@@ -50,14 +57,14 @@ while True:
         or 3*i in board[6:] or 3*i in board[:7:3]\
         or 3*i in board[1:8:3] or 3*i in board[2::3]\
         or 3*i in board[::4] or 3*i in board[2:7:2]:
-            count += 1
+            count2 += 1
             temp.append(i)
             
     # prints results
     
-    if count == 2:
+    if count2 == 2:
         print("X and O can't both win!  Try again.")
-    elif count == 1:
+    elif count2 == 1:
         print(f"{temp[0].upper()} wins!")
         break
     else:
