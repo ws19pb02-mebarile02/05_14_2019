@@ -44,7 +44,7 @@ while True:
         print('Enter a string of length 3 for each row! ')
         count1 += 1
        
-    if count1 > 0:         # if invalid entries occur, or each row has less
+    if count1 > 0:         # if invalid entries occur, or a row has less
         continue           # than 3 characters, sends user back to input prompt
             
     count2 = 0
