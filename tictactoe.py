@@ -38,14 +38,14 @@ while True:
             if j not in xo:
                 print('Illegal input. Only X, O and whitespace!')
                 count1 += 1
-                break
+                break  # breaks out of for loop at first illegal character
 
     else:
         print('Enter a string of length 3 for each row! ')
         count1 += 1
        
-    if count1 > 0:
-        continue
+    if count1 > 0:         # if invalid entries occur, or each row has less
+        continue           # than 3 characters, sends user back to input prompt
             
     count2 = 0
     temp = []
