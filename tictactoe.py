@@ -32,7 +32,7 @@ while True:
     
     count1 = 0
     
-    if isinstance(board,str) and len(board) == 9:  
+    if isinstance(board,str) and len(board) == 9:  # isinstance may not be needed
         board = board.lower()
         for j in board:
             if j not in xo:
